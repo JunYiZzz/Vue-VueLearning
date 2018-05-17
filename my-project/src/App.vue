@@ -1,14 +1,25 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+  <div id="vue_det">
+    <h1>site:{{site}}</h1>
+    <h1>url:{{url}}</h1>
+    <h1>{{details}}</h1>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+new Vue(
+{
+  el:'#vue_det',
+  data:{
+    site:"JunYiZzz的第一个vue",
+    url:"www.baidu.com",
+  },
+  methods:{
+    details:function(){
+      return  this.site+"-233333";
+    }
+  }
+})
 </script>
 
 <style>
